@@ -34,7 +34,7 @@ public class ExercicioUm { // é uma class
 }
 
 
-
+// char pega um digito por posição
 
 
 

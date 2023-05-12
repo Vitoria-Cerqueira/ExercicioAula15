@@ -1,9 +1,10 @@
-package ExDois;//        Escreva um método que verifique se todos os caracteres em
+package ExDois;
+ //        Escreva um método que verifique se todos os caracteres em
 //        uma determinada string são vogais ou não. Retorne true se
 //        cada caractere na string for uma vogal, caso contrário, retorna
 //        false.
 
-// revisar o codigo
+
 
 import java.util.Scanner;
 
@@ -24,15 +25,20 @@ public class ExercicioDois {
 
 
 
-        for (char caracter:palavra.toCharArray()) {
-            for (char vogal: vogais) {
-                if (caracter != vogal){
+        for (char caracter:palavra.toCharArray()) { // aqui estou convertendo palavras para um array de caracter
+            for (int i = 0; i < vogais.length; i++) { // aqui estou percorrendo o vetor de vogais
+                if (caracter != vogais[i]){             // e aqui estou verificando se o caracter digitado é diferente de vogais
 
-                    if (vogal == 'u'){
+                    if (i == vogais.length -1){  // estou fazendo isso para que ele percorra o vetor inteiro, não so a primeira letra
                         return false;
                     }
+
+                }else {
+                    break;
                 }
             }
+
+
         }
         return true;
     }
